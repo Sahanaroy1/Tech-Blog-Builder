@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Richard Street",
+        "email": "richard.street@yahoo.com",
+        "password": "ricstreet123"
+    },
+    {
+        "name": "Grace Nooney",
+        "email": "grace.nooney@bell-labs.com",
+        "password": "nonney321"
+    },
+    {
+        "name": "Layla Bones",
+        "email": "layla@mok-technologies.com",
+        "password": "password9876"
+    }
+]

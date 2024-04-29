@@ -1,0 +1,14 @@
+[
+    {
+        "title": "The Ultimate Tech Quiz",
+        "body": "A web app that will give users 10 new technical questions each day and track their progress in this app."
+    },
+    {
+        "title": "Music near me",
+        "body": "The app created by my friend will give a notification whenever a concert is playing in your area."
+    },
+    {
+        "title": "Rock Paper Scissors",
+        "body": "A game which Adam built will always give a random generator from the other side,"
+    }
+]
