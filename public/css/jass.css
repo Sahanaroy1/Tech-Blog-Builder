@@ -5,6 +5,7 @@
   }
   body {
     margin: 0;
+    align-content: center;
   }
   main {
     display: block;
@@ -221,6 +222,8 @@
   html,
   body {
     min-height: 100%;
+    text-align: center;
+    padding: 5%;
   }
   
   body {

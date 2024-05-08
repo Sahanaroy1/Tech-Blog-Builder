@@ -1,9 +1,10 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
+  console.log('Inside newFormHandler');
+    const title = document.querySelector('#post-title').value.trim();
+
+    const body = document.querySelector('#post-body').value.trim();
   
-    const name = document.querySelector('#post-title').value.trim();
-   // const needed_funding = document.querySelector('#project-funding').value.trim();
-    const description = document.querySelector('#post-text').value.trim();
   
     if (title && body) {
       const response = await fetch(`/api/posts`, {
@@ -15,13 +16,15 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/dashboard');
       } else {
         alert('Failed to create post');
       }
     }
   };
   
+
+
   const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
@@ -31,7 +34,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/dashboard');
       } else {
         alert('Failed to delete post');
       }
@@ -45,4 +48,6 @@ const newFormHandler = async (event) => {
   document
     .querySelector('.post-list')
     .addEventListener('click', delButtonHandler);
+
+
   

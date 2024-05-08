@@ -6,7 +6,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
-            include: [{ module: Comment }, { module: User }],
+            include: [{ model: Comment }, { model: User }],
         });
 
         const posts = postData.map((project) => project.get({ plain: true }));
@@ -23,6 +23,8 @@ router.get('/', async (req, res) => {
 
 router.get('/post/:id', async (req, res) => {
     try {
+        console.log("HIYBN---2---------");
+
         const postData = await Post.findByPk(req.params.id, {
             include: [{ model: Comment}, { model: User }],
         });
@@ -37,8 +39,8 @@ router.get('/post/:id', async (req, res) => {
     }
 });
 
-router.get('/profile', withAuth, async (req, res) => {
-    console.log('Profile:', req.session.user_id);
+router.get('/dashboard', withAuth, async (req, res) => {
+    console.log('Dashboard:', req.session.user_id);
     try {
         const userData = await User.findByPk(req.session.user_id,
         {
@@ -48,7 +50,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
         const user = userData.get({ plain: true });
 
-        res.render('profile', {
+        res.render('dashboard', {
             ...user,
             logged_in: true
         });
@@ -59,7 +61,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
-      res.redirect('/profile');
+      res.redirect('/dashboard');
       return;
     }
   
