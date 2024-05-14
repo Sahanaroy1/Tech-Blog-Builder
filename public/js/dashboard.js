@@ -1,10 +1,7 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
-  console.log('Inside newFormHandler');
     const title = document.querySelector('#post-title').value.trim();
-
     const body = document.querySelector('#post-body').value.trim();
-  
   
     if (title && body) {
       const response = await fetch(`/api/posts`, {
@@ -23,8 +20,6 @@ const newFormHandler = async (event) => {
     }
   };
   
-
-
   const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');

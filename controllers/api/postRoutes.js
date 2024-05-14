@@ -21,7 +21,6 @@ router.put('/', withAuth, async (req, res) => {
             title: req.body.title,
             body: req.body.body
         };
-        console.log(newData);
 
         const postData = await Post.update(newData, 
             {
@@ -36,6 +35,7 @@ router.put('/', withAuth, async (req, res) => {
     });
 
 router.get('/:id', withAuth, async (req, res) => {
+ 
     try {
       const postData = await Post.findByPk(req.params.id, {
         include: [{ model: Comment }],
@@ -61,9 +61,6 @@ router.post('/', withAuth, async (req, res) => {
   };
 
   try {
-    console.log('HI');
-    console.log("HIYBN---3---------");
-
     const newPost = await Post.create(newData);
 
     res.status(200).json(newPost);

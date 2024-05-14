@@ -1,7 +1,7 @@
 <div class="text-center">
     <h2>{{title}}</h2>
     <p>{{body}}</p>
-    <p>{{user.name}}: {{format_date createdAt}}</p>
+    <p>Created By: {{user.name}} {{format_date createdAt}}</p>
 
     <p>
         <a href="/" class="btn btn-primary">More Posts</a>
@@ -13,6 +13,14 @@
             <input type="submit" class="btn btn-sm btn-danger"></input>
         </form>
     </main>
+    {{#each comments as |comment|}}
+
+        <p>{{comment.body}}</p>
+        <p>Commentor: {{comment.user_id}}</p>
+        <p>On: {{format_date comment.createdAt}}</p>
+        
+        {{/each}}
+
 </div>
 
 <script src="/js/post.js"></script>

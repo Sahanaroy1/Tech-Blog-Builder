@@ -21,17 +21,18 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/post/:id', async (req, res) => {
+router.get('/post/:id', withAuth, async (req, res) => {
     try {
-        console.log("HIYBN---2---------");
-
         const postData = await Post.findByPk(req.params.id, {
             include: [{ model: Comment}, { model: User }],
         });
         const post = postData.get({ plain: true });
-
+        const comments = {
+            comment: post.comments
+        }
         res.render('post', {
             ...post,
+            ...comments,
             logged_in: req.session.logged_in
         });
     } catch (err) {
@@ -40,7 +41,6 @@ router.get('/post/:id', async (req, res) => {
 });
 
 router.get('/dashboard', withAuth, async (req, res) => {
-    console.log('Dashboard:', req.session.user_id);
     try {
         const userData = await User.findByPk(req.session.user_id,
         {

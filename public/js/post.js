@@ -3,7 +3,6 @@ const editFormHandler = async(event) => {
   
     const title = document.querySelector('input[name="post-title"]').value;
     const post_content = document.querySelector('input[name="post-body"]').value;
-    console.log('Publish in');
     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
       ];
@@ -27,7 +26,6 @@ const editFormHandler = async(event) => {
   }
 
   const addCommentHandler = async(event) => {
-    console.log("HELLO");
     event.preventDefault();
 
     const body_content = document.querySelector('input[name="body"]').value;
@@ -40,6 +38,7 @@ const editFormHandler = async(event) => {
     }
     console.log(data);
     const response = await fetch(`/api/comments/`, {
+      
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -47,14 +46,12 @@ const editFormHandler = async(event) => {
       }
     });
     if (response.ok) {
-      document.location.replace('/dashboard/');
+      document.location.replace('/post/'+data.post_id);
     }else {
       alert(response.statusText);
     }
   }
-  
-  
-  
+   
   const editPostFormEL = document.querySelector('#edit-post-form');
   if (editPostFormEL) {
     editPostFormEL.addEventListener('submit', editFormHandler);

@@ -4,11 +4,11 @@
         "body": "A web app that will give users 10 new technical questions each day and track their progress in this app."
     },
     {
-        "title": "Music near me",
-        "body": "The app created by my friend will give a notification whenever a concert is playing in your area."
+        "title": "Frontend Web Development",
+        "body": "Everything that you actually see on a website—the layout, the positioning of text and images, colors, fonts, buttons, and so on—are all factors that the frontend developer must consider."
     },
     {
-        "title": "Rock Paper Scissors",
-        "body": "A game which Adam built will always give a random generator from the other side,"
+        "title": "App scripting & testing",
+        "body": "App scripting couldn’t be easier with Python, due to its agile and simple syntax, as well as its many libraries of pre-written code. Furthermore, its easy integration with the language C (more on that later) gives you a lot of scope to create powerful web applications."
     }
 ]
