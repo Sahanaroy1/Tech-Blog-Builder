@@ -21,7 +21,7 @@
 https://github.com/Sahanaroy1/Tech-Blog-Builder
 
 ## Render Link:
-
+https://tech-blog-builder-3.onrender.com
 
 ## Snippet of the tech blog:
 # Login Page ->
