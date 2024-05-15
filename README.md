@@ -23,7 +23,11 @@ https://github.com/Sahanaroy1/Tech-Blog-Builder
 ## Render Link:
 
 
-## Snippet of the tech blogs:
+## Snippet of the tech blog:
 # Login Page ->
 <img width="1396" alt="login page" src="https://github.com/Sahanaroy1/Tech-Blog-Builder/assets/127791384/57b41a6f-65f2-4e35-85a2-213d696a5825">
+
+# Post Page ->
+
+<img width="1405" alt="Create Post" src="https://github.com/Sahanaroy1/Tech-Blog-Builder/assets/127791384/0ea6fb78-e8fa-45a0-8b0d-68d08befb505">
 
