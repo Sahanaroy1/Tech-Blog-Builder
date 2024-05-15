@@ -11,7 +11,7 @@
 * It's done when user has signed in can see the navigation links of home, dashboard and logout.
 * It's done when user visit the home page its shown with existing blog wth its title and body. When the post is clicked its presented with post title, body created by and created date and have option to leave comment on that post.
 * It's done when a comment is inserted and submit button is clicked while its logged in the comment is saved and the post is displayed with comment creator's name and date created.
-* It's done when th dashboard button is clicked from the navigation user is presented with already created blogpost on the right side and an option to create a new post on the left.
+* It's done when the dashboard button is clicked from the navigation user is presented with already created blogpost on the right side and an option to create a new post on the left.
 * It's done when new post is created with title and body and publish button is clicked User is taken back to the dashboard page with the new post added in. The new post is also saved with the created by and created date.
 * It's done when the dashboard page is also presented with delete button beside each post and if delete is clicked that particular post gets deleted.
 * It's done when the user is logged out can only view the post and comment but can add or delete post or comment only when logged in.
