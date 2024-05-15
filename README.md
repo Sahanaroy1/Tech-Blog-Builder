@@ -24,3 +24,6 @@ https://github.com/Sahanaroy1/Tech-Blog-Builder
 
 
 ## Snippet of the tech blogs:
+# Login Page ->
+<img width="1396" alt="login page" src="https://github.com/Sahanaroy1/Tech-Blog-Builder/assets/127791384/57b41a6f-65f2-4e35-85a2-213d696a5825">
+
